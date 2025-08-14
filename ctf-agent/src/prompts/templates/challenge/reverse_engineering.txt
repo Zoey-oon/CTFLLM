@@ -1,0 +1,13 @@
+REVERSE ENGINEERING CHALLENGE: {challenge_name}
+Description: {challenge_description}
+Files: {files_list}
+
+Your task: Analyze the binary/executable and extract the flag in picoCTF{{...}} format.
+Note: You may find wrapped (picoCTF{{content}}) or unwrapped (content) flags - wrap unwrapped content as picoCTF{{content}}.
+
+Common approaches:
+- Static analysis: strings, hex dump, disassembly
+- Dynamic analysis: debugging, tracing execution  
+- Decompilation: Ghidra, IDA, objdump
+- Pattern recognition: hardcoded flags, algorithms, input validation
+Start by examining the file type and looking for obvious strings or patterns that might reveal the flag.

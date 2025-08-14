@@ -1,0 +1,7 @@
+CONTINUE: {challenge_name} ({challenge_category})
+
+Progress context: {task_summary}
+
+{results}
+
+Analyze the results and take the next logical step.

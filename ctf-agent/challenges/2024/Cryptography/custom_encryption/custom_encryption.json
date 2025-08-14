@@ -1,0 +1,13 @@
+{
+  "title": "Custom encryption",
+  "points": "200",
+  "year": "2024",
+  "category": "Cryptography",
+  "difficulty": "Medium",
+  "description": "Can you get sense of this code file and write the function that will decode the given encrypted file content.Find the encrypted file here flag_info and code file might be good to analyze and get the flag.",
+  "files": [
+    "challenges/2024/Cryptography/custom_encryption/enc_flag",
+    "challenges/2024/Cryptography/custom_encryption/custom_encryption.py"
+  ],
+  "solutions": []
+}

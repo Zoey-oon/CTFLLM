@@ -1,0 +1,12 @@
+pandas
+numpy
+python-dotenv
+click
+rich
+tqdm
+requests
+langchain
+langchain-openai
+langchain-anthropic
+langchain-deepseek
+tiktoken 

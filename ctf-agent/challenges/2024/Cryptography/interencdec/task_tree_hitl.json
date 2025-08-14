@@ -1,0 +1,174 @@
+{
+  "metadata": {
+    "challenge_title": "interencdec",
+    "created": "2025-08-14T17:08:46.125930",
+    "task_count": 11
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Analyze and decode base64 string",
+      "status": "completed",
+      "timestamp": "2025-08-14T17:00:01.974277",
+      "subtasks": [
+        {
+          "id": "1.1",
+          "tool": "code_executor",
+          "input": "import base64\ndata = 'YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclh6ZzVNR3N5TXpjNWZRPT0nCg=='\nresu...",
+          "result": "Decoded: b'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrXzg5MGsyMzc5fQ=='",
+          "timestamp": "2025-08-14T16:59:42.096696"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Decode second layer base64",
+      "status": "completed",
+      "timestamp": "2025-08-14T17:00:28.232052",
+      "subtasks": [
+        {
+          "id": "2.1",
+          "tool": "code_executor",
+          "input": "import base64\ndata = 'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrXzg5MGsyMzc5fQ=='\nresult = base64.b64decode(da...",
+          "result": "Decoded: wpjvJAM{jhlzhy_k3jy9wa3k_890k2379}",
+          "timestamp": "2025-08-14T17:00:01.975015"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Analyze cipher transformation",
+      "status": "failed",
+      "timestamp": "2025-08-14T17:01:08.832575",
+      "subtasks": [
+        {
+          "id": "3.1",
+          "tool": "code_executor",
+          "input": "# Calculate character differences between 'wpjvJAM' and 'picoCTF'\nw -> p: -8\np -> i: -7\nj -> c: -7\nv...",
+          "result": "ERROR: Code execution failed: invalid syntax (<string>, line 2)",
+          "timestamp": "2025-08-14T17:00:28.232372"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Attempt Vigenère decryption",
+      "status": "failed",
+      "timestamp": "2025-08-14T17:01:40.930393",
+      "subtasks": [
+        {
+          "id": "4.1",
+          "tool": "code_executor",
+          "input": "def vigenere_decrypt(ciphertext, key):\n    result = []\n    key_len = len(key)\n    for i, c in enumer...",
+          "result": "npxmJOD{xylnyy_b3xp9kr3y_890k2379}",
+          "timestamp": "2025-08-14T17:01:08.833285"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Apply ROT13 transformation",
+      "status": "failed",
+      "timestamp": "2025-08-14T17:02:01.469389",
+      "subtasks": [
+        {
+          "id": "5.1",
+          "tool": "code_executor",
+          "input": "import codecs\nresult = codecs.decode(\"wpjvJAM{jhlzhy_k3jy9wa3k_890k2379}\", 'rot13')\nprint(f\"ROT13 re...",
+          "result": "ROT13 result: jcwiWNZ{wuymul_x3wl9jn3x_890x2379}",
+          "timestamp": "2025-08-14T17:01:40.931655"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "description": "Attempt XOR with known plaintext",
+      "status": "failed",
+      "timestamp": "2025-08-14T17:02:34.713099",
+      "subtasks": [
+        {
+          "id": "6.1",
+          "tool": "code_executor",
+          "input": "def xor_strings(s1, s2):\n    return ''.join(chr(ord(a) ^ ord(b)) for a, b in zip(s1, s2))\n\nknown = \"...",
+          "result": "Potential XOR key: \u0007\u0019\t\u0019\t\u0015",
+          "timestamp": "2025-08-14T17:02:01.469924"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "description": "Apply ROT47 transformation",
+      "status": "failed",
+      "timestamp": "2025-08-14T17:03:06.028670",
+      "subtasks": [
+        {
+          "id": "7.1",
+          "tool": "code_executor",
+          "input": "def rot47(s):\n    x = []\n    for c in s:\n        i = ord(c)\n        if 33 <= i <= 126:\n            x...",
+          "result": "HA;Gyp|L;9=K9J0<b;JhH2b<0gh_<abfhN",
+          "timestamp": "2025-08-14T17:02:34.713577"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "description": "Apply dual shift transformation",
+      "status": "in-progress",
+      "timestamp": "2025-08-14T17:03:06.028673",
+      "subtasks": [
+        {
+          "id": "8.1",
+          "tool": "code_executor",
+          "input": "def dual_shift(s):\n    result = []\n    for c in s:\n        if c.isupper():\n            # Shift upper...",
+          "result": "dwqcCTF{qosgof_r3qf9dh3r_890r2379}",
+          "timestamp": "2025-08-14T17:03:06.029162"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "description": "Fine-tune shift values",
+      "status": "in-progress",
+      "timestamp": "2025-08-14T17:05:25.570192",
+      "subtasks": [
+        {
+          "id": "9.1",
+          "tool": "code_executor",
+          "input": "def fine_tuned_shift(s):\n    result = []\n    for c in s:\n        if c.isupper():\n            shifted...",
+          "result": "ohbnCTF{bzdrzq_c3bq9os3c_890c2379}",
+          "timestamp": "2025-08-14T17:05:25.570822"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "description": "Apply uniform -7 shift with exception",
+      "status": "failed",
+      "timestamp": "2025-08-14T17:08:46.125226",
+      "subtasks": [
+        {
+          "id": "10.1",
+          "tool": "code_executor",
+          "input": "def uniform_shift(s):\n    result = []\n    for c in s:\n        if c == 'A':\n            result.append...",
+          "result": "ERROR: Code execution failed: invalid syntax. Perhaps you forgot a comma? (<string>, line 7)",
+          "timestamp": "2025-08-14T17:06:12.576720"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "description": "Re-attempt uniform shift with corrected syntax",
+      "status": "in-progress",
+      "timestamp": "2025-08-14T17:08:46.125229",
+      "subtasks": [
+        {
+          "id": "11.1",
+          "tool": "code_executor",
+          "input": "def uniform_shift(s):\n    result = []\n    for c in s:\n        if c == 'A':\n            result.append...",
+          "result": "picoCTF{caesar_d3cr9pt3d_890d2379}",
+          "timestamp": "2025-08-14T17:08:46.125818"
+        }
+      ]
+    }
+  ]
+}

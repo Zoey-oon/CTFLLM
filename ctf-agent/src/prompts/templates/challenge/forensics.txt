@@ -1,0 +1,14 @@
+FORENSICS CHALLENGE: {challenge_name}
+Description: {challenge_description}
+Files: {files_list}
+
+Your task: Investigate digital evidence and extract the flag in picoCTF{{...}} format.
+Note: You may find wrapped (picoCTF{{content}}) or unwrapped (content) flags - wrap unwrapped content as picoCTF{{content}}.
+
+Common forensics areas:
+- File analysis: metadata, file carving, hex inspection
+- Steganography: hidden data in images/audio/documents
+- Network forensics: packet captures, traffic analysis
+- Memory forensics: process dumps, artifacts
+- Disk forensics: deleted files, file systems
+Start by identifying the file types and examining them for obvious clues, metadata, or hidden content.

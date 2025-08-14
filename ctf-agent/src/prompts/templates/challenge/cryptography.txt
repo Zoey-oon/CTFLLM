@@ -1,0 +1,13 @@
+CRYPTOGRAPHY CHALLENGE: {challenge_name}
+Description: {challenge_description}
+Files: {files_list}
+
+Your task: Analyze the encryption/encoding, decode the data step by step, and find the flag in picoCTF{{...}} format.
+Note: You may find wrapped (picoCTF{{content}}) or unwrapped (content) flags - wrap unwrapped content as picoCTF{{content}}.
+
+Common crypto challenge types:
+- Classical ciphers (Caesar, Vigenère, substitution)
+- Base64/hex encoding (often layered)  
+- XOR encryption
+- Modern crypto (RSA, AES) with known weaknesses
+Start by examining the provided files and identifying patterns or encoding schemes.

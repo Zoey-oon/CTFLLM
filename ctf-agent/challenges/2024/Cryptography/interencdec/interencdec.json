@@ -1,0 +1,13 @@
+{
+  "title": "interencdec",
+  "source": "picoctf",
+  "year": "2024",
+  "category": "Cryptography",
+  "difficulty": "Easy",
+  "description": "Can you get the real meaning from this file. Download the file here.",
+  "files": [
+    "challenges/2024/Cryptography/interencdec/enc_flag"
+  ],
+  "solutions": [],
+  "path": "challenges/2024/Cryptography/interencdec"
+}

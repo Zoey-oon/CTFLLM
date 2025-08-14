@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "challenge_title": "interencdec",
+    "created": "2025-08-14T16:58:26.594317",
+    "task_count": 4
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Initial base64 decode of file content",
+      "status": "completed",
+      "timestamp": "2025-08-14T16:56:38.295528",
+      "subtasks": [
+        {
+          "id": "1.1",
+          "tool": "code_executor",
+          "input": "import base64\ndata = 'YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclh6ZzVNR3N5TXpjNWZRPT0nCg=='\nresu...",
+          "result": "Decoded: b'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrXzg5MGsyMzc5fQ=='",
+          "timestamp": "2025-08-14T16:56:18.586234"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Second base64 decode of intermediate result",
+      "status": "completed",
+      "timestamp": "2025-08-14T16:57:09.082449",
+      "subtasks": [
+        {
+          "id": "2.1",
+          "tool": "code_executor",
+          "input": "import base64\ndata = 'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrXzg5MGsyMzc5fQ=='\nresult = base64.b64decode(da...",
+          "result": "Decoded: wpjvJAM{jhlzhy_k3jy9wa3k_890k2379}",
+          "timestamp": "2025-08-14T16:56:38.295961"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Analyze potential cipher transformation",
+      "status": "completed",
+      "timestamp": "2025-08-14T16:58:26.593333",
+      "subtasks": [
+        {
+          "id": "3.1",
+          "tool": "code_executor",
+          "input": "def caesar_shift(c, shift):\n    if c.islower():\n        return chr(((ord(c) - ord('a') + shift) % 26...",
+          "result": "Shift between 'w' and 'p': 7\nShift between 'p' and 'i': 7",
+          "timestamp": "2025-08-14T16:57:09.083031"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Apply Caesar shift (7) to decode flag",
+      "status": "in-progress",
+      "timestamp": "2025-08-14T16:58:26.593336",
+      "subtasks": [
+        {
+          "id": "4.1",
+          "tool": "code_executor",
+          "input": "def caesar_decrypt(text, shift):\n    result = \"\"\n    for char in text:\n        if char.isalpha():\n  ...",
+          "result": "picoCTF{caesar_d3cr9pt3d_890d2379}",
+          "timestamp": "2025-08-14T16:58:26.594200"
+        }
+      ]
+    }
+  ]
+}

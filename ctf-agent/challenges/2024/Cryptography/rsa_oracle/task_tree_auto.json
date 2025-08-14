@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "challenge_title": "rsa_oracle",
+    "created": "2025-08-14T20:35:09.626313",
+    "task_count": 5
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "description": "Analyze password.enc and connect to RSA oracle",
+      "status": "in-progress",
+      "timestamp": "2025-08-14T20:30:31.919613",
+      "subtasks": [
+        {
+          "id": "1.1",
+          "tool": "network_connector",
+          "input": "titan.picoctf.net:64986 nc",
+          "result": "",
+          "timestamp": "2025-08-14T20:30:31.956836"
+        },
+        {
+          "id": "1.2",
+          "tool": "network_connector",
+          "input": "titan.picoctf.net:64986 nc",
+          "result": "",
+          "timestamp": "2025-08-14T20:30:52.757911"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Send password ciphertext to oracle",
+      "status": "failed",
+      "timestamp": "2025-08-14T20:33:29.990546",
+      "subtasks": [
+        {
+          "id": "2.1",
+          "tool": "network_connector",
+          "input": "titan.picoctf.net:64986 nc 2575135950983117315234568522857995277662113128076071837763492069763989760...",
+          "result": "",
+          "timestamp": "2025-08-14T20:31:21.084749"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "description": "Prepare modified ciphertext for chosen ciphertext attack",
+      "status": "failed",
+      "timestamp": "2025-08-14T20:33:58.232435",
+      "subtasks": [
+        {
+          "id": "3.1",
+          "tool": "network_connector",
+          "input": "titan.picoctf.net:64986 nc test",
+          "result": "",
+          "timestamp": "2025-08-14T20:33:30.038117"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "description": "Probe oracle with different input formats",
+      "status": "in-progress",
+      "timestamp": "2025-08-14T20:33:58.232440",
+      "subtasks": [
+        {
+          "id": "4.1",
+          "tool": "code_executor",
+          "input": "ciphertext = 257513595098311731523456852285799527766211312807607183776349206976398976001860473381326...",
+          "result": "312b0098d7836e15683e5f2157eb1b30198668c71c69a272c0510d143700954f008945bd274db8b51592fe83139a02372eaab72e54a6bbefb3d7668492c1cb76",
+          "timestamp": "2025-08-14T20:33:58.233607"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "description": "Send hex-encoded ciphertext to oracle",
+      "status": "in-progress",
+      "timestamp": "2025-08-14T20:35:09.570687",
+      "subtasks": [
+        {
+          "id": "5.1",
+          "tool": "network_connector",
+          "input": "titan.picoctf.net:64986 nc 312b0098d7836e15683e5f2157eb1b30198668c71c69a272c0510d143700954f008945bd2...",
+          "result": "",
+          "timestamp": "2025-08-14T20:35:09.626115"
+        }
+      ]
+    }
+  ]
+}
