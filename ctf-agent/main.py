@@ -314,6 +314,7 @@ def handle_auto_solving(agent, challenge_data: Dict, prompt: str) -> bool:
                     continue
             else:
                 # No tool results, continue normally
+                summary = agent.get_conversation_summary()
                 next_input = agent.determine_next_input(challenge_data, summary)
                 response = agent.interact(next_input)      
             
