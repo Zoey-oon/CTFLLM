@@ -17,10 +17,10 @@ def test_api_key(llm_service: str, api_key: str) -> bool:
             llm = ChatDeepSeek(api_key=api_key, model="deepseek-chat", timeout=30)
         elif llm_service == "openai":
             from langchain_openai import ChatOpenAI
-            llm = ChatOpenAI(api_key=api_key, model="gpt-3.5-turbo", timeout=30)
+            llm = ChatOpenAI(api_key=api_key, model="gpt-4o", timeout=30)  # Latest GPT-4o model
         elif llm_service == "anthropic":
             from langchain_anthropic import ChatAnthropic
-            llm = ChatAnthropic(api_key=api_key, model="claude-3-haiku-20240307", timeout=30)
+            llm = ChatAnthropic(api_key=api_key, model="claude-sonnet-4-20250514", timeout=30)  # Latest Claude Sonnet 4 (May 2025)
         else:
             return False
         
