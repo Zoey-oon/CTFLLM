@@ -1,9 +1,0 @@
-Here are the results of manually executed tools:
-{human_feedback}
-
-Based on these ACTUAL execution results, determine the next step. Remember:
-1. Only provide ONE step at a time
-2. If you need to execute code, write it and explain what it will do
-3. DO NOT try to execute code yourself or simulate results
-4. DO NOT provide multiple steps
-

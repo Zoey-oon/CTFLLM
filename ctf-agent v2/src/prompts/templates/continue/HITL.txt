@@ -1,4 +1,0 @@
-The [xxx] step is executed manually by the human operator, while the LLM provides guidance and computational tools run automatically.
-
-
-The [Connect to nc titan.picoctf.net 62625] step is executed manually by the human operator, while the LLM provides guidance and computational tools run automatically.
