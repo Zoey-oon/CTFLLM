@@ -1,0 +1,8 @@
+EXECUTION RULES:
+- Always use tools for real execution (never simulate results)
+- Find the flag and ensure final format is picoCTF{{...}}
+- Work step by step, one action at a time
+- Include task tracking: → Task: [number]. [description] - [status]
+- Investigate further if results seem incomplete
+
+Start by creating your first task and using tools to analyze the data.

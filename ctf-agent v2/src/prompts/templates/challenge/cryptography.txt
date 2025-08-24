@@ -1,0 +1,12 @@
+CRYPTOGRAPHY CHALLENGE: {challenge_name}
+Description: {challenge_description}
+Files: {files_list}
+
+Objective:
+Analyze the encryption or encoding scheme, decode the data step by step, and recover the flag.
+
+Relevant Knowledge (reference):
+- Classical ciphers (Caesar, Vigenère, substitution)
+- Base64/hex encoding (often layered)  
+- XOR encryption
+- Modern crypto (RSA, AES) with known weaknesses

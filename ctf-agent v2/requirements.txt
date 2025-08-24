@@ -1,0 +1,91 @@
+# =====================================
+# CTF Agent Python Dependencies
+# =====================================
+
+# Core Framework Dependencies
+# ---------------------------
+langchain>=0.3.0
+langchain-openai>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-deepseek>=0.1.0
+tiktoken>=0.7.0
+
+# Data Processing & Analysis
+# --------------------------
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# CLI & Interface
+# ---------------
+click>=8.0.0
+rich>=13.0.0
+tqdm>=4.65.0
+python-dotenv>=1.0.0
+
+# Cryptography & Encoding
+# ------------------------
+pycryptodome>=3.19.0
+cryptography>=41.0.0
+base58>=2.1.1
+
+# Binary Exploitation
+# -------------------
+pwntools>=4.10.0
+
+# Web Security & Network
+# ----------------------
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+urllib3>=2.0.0
+paramiko>=3.4.0
+
+# File Format Analysis
+# -------------------
+python-magic>=0.4.27
+
+# Image Processing & QR Codes
+# ---------------------------
+Pillow>=10.0.0
+qrcode[pil]>=7.4.2
+pyzbar>=0.1.9
+opencv-python>=4.8.0
+
+# JavaScript Execution
+# --------------------
+PyExecJS>=1.5.1
+js2py>=0.74
+
+# Development & Debugging
+# -----------------------
+ipython>=8.0.0
+
+# =====================================
+# System-Level Dependencies (Installed via Docker/setup)
+# =====================================
+# 
+# Binary Analysis:
+#   - file, binutils, gdb, strace, ltrace, objdump, hexdump, xxd, strings
+#
+# Network Tools:
+#   - nmap, netcat-openbsd, telnet, openssh-client, sshpass, expect, curl, wget, socat
+#
+# Cryptography:
+#   - openssl, gnupg2, steghide
+#
+# File Processing:
+#   - unzip, zip, p7zip-full, rar, unrar, exiftool, imagemagick, ffmpeg
+#
+# Forensics & Steganography:
+#   - testdisk, sleuthkit, binwalk, steghide, exiftool
+#
+# Image & QR Code Processing:
+#   - qrencode, zbar-tools, libzbar0, libzbar-dev, libopencv-dev
+#
+# Utilities:
+#   - util-linux (provides hexdump), coreutils
+#
+# Development:
+#   - git, vim, nano, build-essential, nodejs
+#
+# =====================================
