@@ -1,0 +1,159 @@
+# =====================================
+# CTF Agent Python Dependencies
+# =====================================
+
+# Core Framework Dependencies
+# ---------------------------
+langchain>=0.3.0
+langchain-openai>=0.3.0
+langchain-anthropic>=0.3.0
+langchain-deepseek>=0.1.0
+tiktoken>=0.7.0
+
+# Data Processing & Analysis
+# --------------------------
+pandas>=2.0.0
+numpy>=1.24.0
+requests>=2.31.0
+
+# CLI & Interface
+# ---------------
+click>=8.0.0
+rich>=13.0.0
+tqdm>=4.65.0
+python-dotenv>=1.0.0
+
+# Cryptography & Encoding
+# ------------------------
+pycryptodome>=3.19.0
+cryptography>=41.0.0
+base58>=2.1.1
+
+# Binary Exploitation
+# -------------------
+pwntools>=4.10.0
+
+# Web Security & Network
+# ----------------------
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+urllib3>=2.0.0
+paramiko>=3.4.0
+websockets>=11.0.0
+scapy>=2.5.0
+
+# File Format Analysis
+# -------------------
+python-magic>=0.4.27
+
+# Image Processing & QR Codes
+# ---------------------------
+Pillow>=10.0.0
+qrcode[pil]>=7.4.2
+pyzbar>=0.1.9
+opencv-python>=4.8.0
+
+# JavaScript Execution
+# --------------------
+PyExecJS>=1.5.1
+js2py>=0.74
+
+# Math & Number Theory
+# --------------------
+sympy>=1.12.0
+gmpy2>=2.1.5
+matplotlib>=3.7.0
+
+# SMT Solver & Symbolic Execution
+# -------------------------------
+z3-solver>=4.12.0
+angr>=9.2.0
+
+# Debugging & Reverse Engineering
+# -------------------------------
+# Note: Some tools like x64dbg, Ghidra are standalone applications
+# They need to be installed separately via system package managers
+
+# Binary Analysis & Disassembly
+# -----------------------------
+capstone>=4.0.2  # Disassembly framework
+keystone-engine>=0.9.2  # Assembly framework
+unicorn>=1.0.2  # CPU emulation framework
+pefile>=2023.2.7  # PE file analysis
+pyelftools>=0.29  # ELF file analysis
+lief>=0.12.3  # Binary parsing and modification
+
+# Forensics & File Recovery
+# -------------------------
+foremost>=1.5.7  # File carving tool
+scalpel>=2.0  # File carving tool
+testdisk>=7.1  # Data recovery tool
+
+# Development & Debugging
+# -----------------------
+ipython>=8.0.0
+
+# =====================================
+# System-Level Dependencies (Installed via Docker/setup)
+# =====================================
+# 
+# Binary Analysis:
+#   - file, binutils, gdb, strace, ltrace, objdump, hexdump, xxd, strings
+#   - upx (executable packer/unpacker)
+#   - binwalk (binary analysis)
+#   - radare2 (reverse engineering framework)
+#   - gdb-multiarch (multi-architecture debugger)
+#
+# Debuggers & Disassemblers:
+#   - gdb (GNU debugger) - included in binutils
+#   - x64dbg/x32dbg (Windows debugger) - Windows only, not available in Linux
+#   - Ghidra (reverse engineering tool) - Java-based, needs separate installation
+#   - radare2 (reverse engineering framework) - included in Docker
+#
+# Forensics & File Recovery:
+#   - foremost (file carving) - included in Docker
+#   - scalpel (file carving) - included in Docker
+#   - testdisk (data recovery) - included in Docker
+#   - sleuthkit (forensic toolkit) - included in Docker
+#
+# Network Tools:
+#   - nmap, netcat-openbsd, telnet, openssh-client, sshpass, expect, curl, wget, socat
+#
+# Cryptography:
+#   - openssl, gnupg2, steghide
+#
+# File Processing:
+#   - unzip, zip, p7zip-full, rar, unrar, exiftool, imagemagick, ffmpeg
+#
+# Image & QR Code Processing:
+#   - qrencode, zbar-tools, libzbar0, libzbar-dev, libopencv-dev
+#
+# Utilities:
+#   - util-linux (provides hexdump), coreutils
+#
+# Development:
+#   - git, vim, nano, build-essential, nodejs
+#
+# =====================================
+# Installation Instructions
+# =====================================
+#
+# Docker Environment:
+#   - All system tools are pre-installed in the Dockerfile
+#   - Python packages are installed via requirements.txt
+#   - No additional installation needed
+#
+# Non-Docker Environment (Ubuntu/Debian):
+#   sudo apt-get update
+#   sudo apt-get install -y upx binwalk xxd file strings objdump gdb-multiarch radare2 foremost scalpel testdisk sleuthkit steghide exiftool binutils
+#
+# Non-Docker Environment (macOS):
+#   brew install upx binwalk xxd file binutils gdb radare2 foremost scalpel testdisk sleuthkit steghide exiftool
+#
+# Non-Docker Environment (CentOS/RHEL):
+#   sudo yum install -y upx binwalk xxd file binutils gdb radare2 foremost scalpel testdisk sleuthkit steghide exiftool
+#
+# Note: x64dbg/x32dbg and Ghidra are not available via package managers
+# - x64dbg/x32dbg: Windows-only, download from https://x64dbg.com/
+# - Ghidra: Java-based, download from https://ghidra-sre.org/
+# =====================================

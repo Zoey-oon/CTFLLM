@@ -1,0 +1,14 @@
+FLAG ANALYSIS: {challenge_name} ({challenge_category})
+
+{task_summary}
+
+Results to analyze:
+{results}
+
+Identify ALL possible flag candidates:
+1. Strings matching picoCTF{{...}} format
+2. Other curly brace formats {{{{...}}}}
+3. Strings that might be encoded flags
+4. Partial flags that need further decoding
+
+List each candidate and assess its likelihood of being the correct flag.

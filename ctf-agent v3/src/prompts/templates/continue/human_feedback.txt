@@ -1,0 +1,23 @@
+Here are the results of manually executed tools:
+{human_feedback}
+
+Previous step results:
+{results}
+
+Please analyze BOTH the manual execution results and previous step results to determine ONE next step. You MUST follow these requirements:
+→ Task: [next_number]. [description] - in-progress
+
+EXECUTION RULES:
+1. Only provide ONE step at a time
+2. DO NOT write or execute code yourself
+3. DO NOT simulate results
+4. Use the available tools for execution
+5. Follow the system prompt requirements exactly
+
+RESPONSE FORMAT:
+1. Start with task management update
+2. Describe what you want to do next
+3. Use tool tags if you need to execute tools: <tool>tool_name</tool><input>python_code</input>
+4. Keep response focused and actionable
+
+What should we do next with these results?

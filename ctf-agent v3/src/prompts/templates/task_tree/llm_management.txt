@@ -1,0 +1,8 @@
+TASK TREE MANAGEMENT: 
+Always include task status updates in your responses:
+1. UPDATE previous task status:
+   → Task: [number]. [description] - [completed/failed/in-progress/pending]
+2. CREATE new task when starting something:
+   → Task: [next_number]. [new description] - in-progress
+Status: completed/in-progress/failed/pending
+Use clear solving logic (not technical details).

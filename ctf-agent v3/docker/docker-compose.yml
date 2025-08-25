@@ -1,0 +1,34 @@
+# 移除版本声明，使用最新的compose规范
+
+services:
+  ctf-agent:
+    image: ctf-agent-enhanced:latest
+    container_name: ctf-agent
+    working_dir: /app
+    volumes:
+      # 挂载项目目录，方便开发时修改代码
+      - ../src:/app/src
+      - ../challenges:/app/challenges
+      - ../main.py:/app/main.py
+      # 挂载配置文件（如果需要的话）
+      - ../.env:/app/.env:ro
+    environment:
+      - PYTHONPATH=/app
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    # Enable network access for CTF challenges
+    ports:
+      - "8000:8000"
+    # Enable privileged mode for security tools and sudo
+    privileged: true
+    # 如果需要访问主机网络，取消下面的注释
+    # network_mode: host
+    restart: unless-stopped
+    # 如果需要持久化数据，可以添加数据卷
+    # volumes:
+    #   - ctf_data:/app/data
+
+# 如果需要数据持久化，可以取消注释下面的行
+# volumes:
+#   ctf_data:

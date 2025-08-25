@@ -1,0 +1,30 @@
+REVERSE ENGINEERING CHALLENGE: {challenge_name}
+Description: {challenge_description}
+Files: {files_list}
+
+Objective:
+Analyze the given binary or executable, identify its structure or transformations, and extract the flag.
+
+Relevant Knowledge (reference):
+- Binary formats: ELF, PE, stripped vs. unstripped binaries
+- Packing and obfuscation: recognition and unpacking methods
+- Static analysis: strings, hexdump, disassembly
+- Dynamic analysis: debugging, execution tracing
+- Decompilation: Ghidra, IDA, objdump
+- Data transformations: encoding, compression, simple cryptography
+
+Common Tools & Techniques (illustrative):
+- File inspection: file, strings, hexdump, xxd
+- Packing/unpacking: common packers (e.g., UPX)
+- Static analysis: objdump, radare2
+- Decompilation: Ghidra, IDA
+- Dynamic analysis: gdb, ltrace, strace
+- Text filtering: grep, regex search
+- Data decoding: xxd, base64 utilities, custom scripts
+
+Common Task Patterns (illustrative):
+- Detect and unpack compressed or packed binaries if present
+- Extract and analyze candidate strings for flag-related content
+- Disassemble or decompile to reconstruct control flow and algorithms
+- Trace execution dynamically to observe input validation or flag construction
+- Apply decoding or deobfuscation (e.g., hex, base64, simple substitutions) to recover the flag
