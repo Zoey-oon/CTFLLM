@@ -100,7 +100,3 @@ challenges/
 
 ## License
 
-
-## Contributing
-
-[Your Contributing Guidelines Here]
